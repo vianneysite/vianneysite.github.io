@@ -1,0 +1,114 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Tangerine:wght@700&display=swap');
+html{
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0;
+}
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+h1{
+    font-family: 'Poppins';
+    margin: 0;
+    font-size: 2rem;
+}
+h2{
+    margin: 0;
+    font-family: 'Tangerine';
+    font-size: 2rem;
+    
+}
+.title{
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    display: flex;
+    width: 30%;
+    justify-content: space-evenly;
+}
+.navbar{
+    display: flex;
+    justify-content: space-evenly;
+    width: 40%;
+    font-family: 'Poppins';
+    font-weight: 300;
+
+}
+.navbtn{
+    text-decoration: none;
+}
+.welcome{
+    display: flex;
+    align-items: center;
+}
+.housePicture{
+    width: 50%;
+
+}
+.presentation{
+    padding: 7%;
+    width: 50%;
+}
+.presentationTitle{
+    font-size: xx-large;
+}
+
+.categ{
+    margin-top: 5%;
+}
+.categTitle{
+    text-align: center;
+}
+.categInfo{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10% 0 10%;
+    align-items: center;
+    margin-top: 2%;
+}
+.hostPicture{
+    width: 40%;
+}
+
+
+.formulas{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.proposition{
+    font-family: 'Poppins';
+    text-decoration: none;
+    text-align: center;
+    color: black;
+    border: 2px solid black;
+    border-radius: 1rem;
+    width: 25%;
+}
+.propoIllustration{
+    width: 100%;
+    border-radius: 1rem 1rem 0 0;
+}
+
+
+
+
+
+
+footer{
+    background-color: black;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+.note{
+    color: white;
+    margin: 0;
+}
