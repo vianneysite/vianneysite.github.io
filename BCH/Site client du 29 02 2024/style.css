@@ -1,0 +1,371 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Tangerine:wght@700&display=swap');
+
+*{
+    --mylight:#c2cbd1;
+    --mygrey:#858585;
+    --mybluewhite:#f8f8f8;
+    --mydark:#0A090C;
+    --Ombre: 5px 5px 5px rgba(129, 133, 148, 0.582);/*rgba(0, 6, 29, 0.582)*/
+    --Ombre2: 2px 2px 2px rgba(129, 133, 148, 0.582);
+}
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background-color: var(--mylight);
+}
+
+.header {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--mybluewhite);
+    box-shadow:none;
+    backdrop-filter: none;
+    transition: all 0.5s;
+}
+.header.scroll{
+    background-color: rgba(255, 255, 255, 0.753);
+    box-shadow: var(--Ombre);
+    backdrop-filter: blur(6px);
+    border-radius:0 0 3px 5px ;
+}
+h1 {
+    font-family: 'Poppins';
+    margin: 0;
+    font-size: 2rem;
+}
+
+h2,font {
+    margin: 0;
+    font-family: 'Tangerine';
+    font-size: 2rem;
+
+}
+
+.title {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    display: flex;
+    width: 40%;
+    justify-content: space-evenly;
+}
+.menuBtn{
+    display: none;
+    cursor: pointer;
+}
+.menuPicture{
+    position: relative;
+    width: 30px;
+    margin: 10px 3px 0 0;
+}
+.navbar {
+    display: flex;
+    justify-content: space-evenly;
+    width: 40%;
+    font-family: 'Poppins';
+    font-weight: 300;
+    
+
+}
+
+.navbtn {
+    text-decoration: none;
+    color: var(--mydark);
+    
+}
+.navbtn:hover{
+    text-decoration: underline;
+}
+.navbar_smartphone{
+   display: none;
+}
+.welcome {
+    display: flex;
+    align-items: center;
+    margin-top: 73px;
+    
+}
+
+.housePicture {
+    width: 50%;
+
+}
+
+.presentation {
+    padding: 7%;
+    width: 50%;
+
+}
+
+.presentationTitle {
+    font-size: xx-large;
+}
+.choice{
+    margin-top: 3%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 20rem;
+    font-family: 'Poppins';
+
+    
+}
+.startbtn{
+    background-color: var(--mydark);
+    color: var(--mylight);
+    padding: 10px 15px 10px 15px;
+    transition: all 0.5s;
+    border: 2px solid var(--mydark);
+    text-decoration: none;
+}
+.startbtn:hover{
+    background-color: var(--mylight);
+    color: var(--mydark);
+    
+
+}
+.location{
+    background-color: var(--mydark);
+    color: white;
+}
+.info {
+    font-family: 'Poppins';
+    margin: 10% 0 10% 0;
+}
+
+.categ {
+    padding: 5% 0 5% 0;
+}
+
+.categTitle {
+    text-align: center;
+    margin-bottom: 2%;
+}
+
+.categInfo {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 10% 0 10%;
+    align-items: center;
+    margin-top: 2%;
+}
+
+iframe{
+    height: 300px;
+    width: 500px;
+}
+
+.hostPicture {
+    width: 40%;
+}
+
+.booking{
+    background-color: var(--mydark);
+}
+.light{
+    color: var(--mylight);
+}
+.formulas {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 0;
+    
+}
+
+.proposition {
+    font-family: 'Poppins';
+    text-decoration: none;
+    text-align: center;
+    background-color: var(--mylight);
+    color: black;
+    border-radius: 1rem;
+    width: 25%;
+    transition: all 0.5s;
+    margin-top: 3px;
+}
+.proposition:hover{
+    background-color: var(--mybluewhite)  ;
+    margin-top: 0;
+    transform: translateY(-3px);
+}
+
+.propoIllustration {
+    width: 100%;
+    border-radius: 1rem 1rem 0 0;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.contactList {
+    font-family: 'Poppins';
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+
+}
+
+.contactLine {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contactLink {
+    font-size: x-large;
+    margin-left: 2%;
+}
+
+span {
+    white-space: nowrap;
+}
+
+.mediaIcon {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+
+
+footer {
+    font-family: 'Poppins';
+    background-color: black;
+    margin: 0;
+    flex-direction: column;
+    padding: 3%;
+
+}
+
+.note {
+    color: white;
+    margin: 0;
+}
+
+@media screen and (max-width: 900px) {
+
+    h1{
+        text-align: right;
+        margin: 2px;
+    }
+
+    .title {
+        width: 100%;
+        font-size: small;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .menuBtn.on{
+        display: flex;
+    }
+
+    .navbar{
+        display: none;
+    }
+
+    .navbar_smartphone {
+       display: none;
+       background-color: rgba(255, 255, 255, 0.753);
+       box-shadow: var(--Ombre2);
+       backdrop-filter: blur(6px);
+       border-radius: 5px;   
+       width: 150px;
+       height: 190px;
+       position: fixed;
+       top: 50%;
+       left: 50%;
+       transform: translate(-50%, -50%);
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+       justify-content: space-evenly;
+       font-family: 'Poppins';
+       font-weight: 300;
+       z-index: 19;
+       transition: all 0.5s;
+    }
+    .navbar_smartphone.on{
+        display: flex;
+    }
+
+    .welcome {
+        flex-direction: column-reverse;
+        margin-top: 5%;
+    }
+
+    .presentation,
+    .housePicture {
+        width: 100%;
+    }
+    .presentation{
+        display: flex;
+        margin-top: 30px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 7% 0 7% 0;
+    }
+    .choice{
+        flex-direction: column;
+    }
+    .startbtn{
+        margin-bottom: 1%;
+    }
+
+    .categInfo {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    iframe{
+        height: 200px;
+        width: 200px;
+    }
+
+    .contactList {
+        width: 80%;
+        display: flex;
+        align-items: center;
+
+    }
+    .contactLine{
+        width: 100%;
+        display: flex;
+       justify-content: center;
+    }
+
+    .mail{
+        font-size: medium;
+    }
+
+    .formulas {
+        flex-direction: column;
+
+    }
+
+    .proposition {
+        width: 80%;
+        margin-top: 2%;
+    }
+
+
+}
+@media screen and (max-width: 450px) {
+    h1,.presentationTitle,font{
+        font-size: 1.5rem;
+    }
+}
