@@ -14,8 +14,8 @@
     <div class="header">
         <div class="title">
             <h1 class="inTitle">La Barbinière<font>Chambres d'hôtes</font></h1>
-            <a id="open" class="menuBtn on" onclick="OpenMenu()"><img class="menuPicture" src="img/menu.svg"></a>
-            <a id="close" class="menuBtn" onclick="CloseMenu()"><img class="menuPicture" src="img/close.svg"></a>
+            <a id="open" class="menuBtn on" onclick="displayMenu()"><img class="menuPicture" src="img/menu.svg"></a>
+            <a id="close" class="menuBtn" onclick="displayMenu()"><img class="menuPicture" src="img/close.svg"></a>
         </div>
         <div class="navbar">
             <a class="navbtn" href="#accueil">Accueil</a>
@@ -25,10 +25,10 @@
         </div>
     </div>
     <div id="navbar_smartphone" class="navbar_smartphone">
-        <a class="navbtn" href="#accueil" onclick="CloseMenu()">Accueil</a>
-        <a class="navbtn" href="#maison" onclick="CloseMenu()">La Maison</a>
-        <a class="navbtn" href="#réserver" onclick="CloseMenu()">Réserver</a>
-        <a class="navbtn" href="#contact" onclick="CloseMenu()">Contact</a>
+        <a class="navbtn" href="#accueil" onclick="displayMenu()">Accueil</a>
+        <a class="navbtn" href="#maison" onclick="displayMenu()">La Maison</a>
+        <a class="navbtn" href="#réserver" onclick="displayMenu()">Réserver</a>
+        <a class="navbtn" href="#contact" onclick="displayMenu()">Contact</a>
     </div> 
     <div id="accueil" class="welcome">
         <img src="img/façace maison marron.jpg" class="housePicture">
@@ -60,10 +60,10 @@
         </div>
     </div>
     <div class="hostServices categ">
-        <h1 class="categTitle">L'hospitalité vendéenne à votre service</h1>
-        <div class="categInfo">
-            <img class="hostPicture" src="img/grand salon 3.jpg" alt="salle de bains">
-            <div class="infoList">
+        <img class="hostPicture" src="img/grand salon 3.jpg" alt="salle de bains">
+        <div class="categInfo hostServices ">
+            <h1 class="categTitle hostServices">L'hospitalité vendéenne à votre service</h1>
+            <div class="infoList hostServices ">
                 <p class="info">- Sanitaires et cuisine</p>
                 <p class="info">- Petit déjeûner compris</p>
                 <p class="info">- Dîner sur demande</p>
@@ -128,7 +128,7 @@
 
     <footer>
         <p class="note">Développé par Vianney et Philbert</p>
-        <p class="note">©️ 2024 - Koaladev</p>
+        <p class="note">©️ 2024 - Lyncis</p>
     </footer>
 </div>
 </body>

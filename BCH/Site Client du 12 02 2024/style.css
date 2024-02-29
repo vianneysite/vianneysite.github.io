@@ -15,10 +15,7 @@ html {
 
 body {
     margin: 0;
-    margin: 0;
     padding: 0;
-    background-color: var(--couleurFond);
-    width: 100vw;
     height: 100vh;
     background-attachment: fixed;
     background-image: url('img/hills-615429_1920.jpg'); 
@@ -50,7 +47,7 @@ body {
     background-color: rgba(255, 255, 255, 0.753);
     box-shadow: var(--Ombre);
     backdrop-filter: blur(6px);
-    border-radius:0 0 3px 5px ;
+    border-radius:0 0 5px 5px ;
 }
 h1 {
     color: var(--NoirText);
@@ -81,7 +78,7 @@ h2,font {
 .menuPicture{
     position: relative;
     width: 30px;
-    margin: 10px 3px 0 0;
+    margin: 10px 6px 0 0;
 }
 .navbar {
     display: flex;
@@ -101,13 +98,11 @@ h2,font {
 .navbtn:hover{
     text-decoration: underline;
 }
-.navbar_smartphone{
-   display: none;
-}
+
 .welcome {
     display: flex;
     align-items: center;
-    margin-top: 73px;
+    margin-top:55px;
     
 }
 
@@ -163,6 +158,14 @@ h2,font {
     padding: 5% 0 5% 0;
 }
 
+.categ.hostServices {
+    padding:0;
+    display: inline-flex;
+    flex-direction: row-reverse;
+}
+
+
+
 .categTitle {
     text-align: center;
     margin-bottom: 2%;
@@ -172,19 +175,36 @@ h2,font {
 .categInfo {
     display: flex;
     justify-content: space-around;
-    padding: 0 10% 0 10%;
+    padding: 0 1% 0 5%;
     align-items: center;
     margin-top: 2%;
     color: var(--mylight);
 }
 
+.categInfo.hostServices{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 0;
+    align-items: center;
+}
+.infoList.hostServices{
+    display: grid;
+    justify-items: start;
+    margin-left: 5%;
+}
+
+
+
 iframe{
+    margin-left: 5px;
     height: 300px;
-    width: 500px;
+    width: 40%;
 }
 
 .hostPicture {
-    width: 40%;
+    width: 50%;
 }
 
 .booking{
@@ -213,7 +233,7 @@ iframe{
     margin-top: 3px;
 }
 .proposition:hover{
-    background-color: var(--mybluewhite)  ;
+    background-color: var(--mybluewhite1)  ;
     margin-top: 0;
     transform: translateY(-3px);
 }
@@ -281,6 +301,10 @@ footer {
         margin: 2px;
     }
 
+    h1.inTitle{
+        margin-left: 6px;
+    }
+
     .title {
         width: 100%;
         font-size: small;
@@ -297,18 +321,13 @@ footer {
 
     .navbar_smartphone {
        display: none;
-       background-color: rgba(255, 255, 255, 0.753);
-       box-shadow: var(--Ombre2);
-       backdrop-filter: blur(6px);
-       border-radius: 5px;   
-       width: 150px;
-       height: 190px;
+       background-color: var(--mybluewhite1);  
+       width: 100%;
+       height: auto;
        position: fixed;
-       top: 50%;
+       top: 60px;
        left: 50%;
        transform: translate(-50%, -50%);
-       flex-direction: column;
-       justify-content: center;
        align-items: center;
        justify-content: space-evenly;
        font-family: 'Poppins';
@@ -349,9 +368,23 @@ footer {
         justify-content: center;
     }
 
+    .categ.hostServices {
+        flex-direction: column-reverse;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+
+    .categInfo.hostServices{
+        align-items: center;
+    }
+
+    .hostPicture {
+        width: 100%;
+    }
+
     iframe{
-        height: 200px;
-        width: 200px;
+        height: 250px;
+        width: 90%;
     }
 
     .contactList {
@@ -380,10 +413,31 @@ footer {
         margin-top: 2%;
     }
 
+    .categInfo{
+        padding: 0 2% 0 2%;
+    }
+
 
 }
 @media screen and (max-width: 450px) {
-    h1,.presentationTitle,font{
+    h1,.presentationTitle,font,h1.inTitle {
         font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+    .mail {
+        font-size: 0.7rem;
+    }
+
+    body{
+        overflow-x: hidden;
+    }
+}
+
+@media screen and (max-width: 350px){
+    h1, .presentationTitle, font {
+        font-size: 1rem;
     }
 }
