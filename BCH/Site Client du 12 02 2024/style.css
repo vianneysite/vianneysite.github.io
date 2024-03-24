@@ -145,10 +145,7 @@ h2,font {
     
 
 }
-.location{
-    background-color: var(--mydark);
-    color: white;
-}
+
 .info {
     font-family: 'Poppins';
     margin: 10% 0 10% 0;
@@ -207,7 +204,7 @@ iframe{
     width: 50%;
 }
 
-.booking{
+.dark{
     background-color: var(--mydark);
 }
 .light{
@@ -243,30 +240,35 @@ iframe{
     border-radius: 1rem 1rem 0 0;
 }
 
-.contact {
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
+label{
+    margin: 5px;
 }
 
-.contactList {
-    font-family: 'Poppins';
-    display: flex;
-    flex-direction: column;
-    width: 40%;
-
+input[type="email"],input[type="date"], input[type="tel"],textarea{
+    border-radius: 0.5rem;
+    border: 2px solid var(--mydark);
+    padding: 5px;
+    background-color: #ffffff5d;
+    backdrop-filter: blur(6px);
+    transition: all 0.5s;
 }
 
-.contactLine {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+
+input[type="email"]:hover,input[type="date"]:hover, input[type="tel"]:hover,textarea:hover{
+    border-radius: 1rem;
+    background-color: var(--mylight);
 }
 
-.contactLink {
-    font-size: x-large;
-    margin-left: 2%;
-    color: var(--mylight);
+input[type="email"]:focus,input[type="date"]:focus, input[type="tel"]:focus,textarea:focus{
+    border-radius: 1rem;
+    outline: none;
+    background-color: var(--mylight);
+}
+
+
+
+.textInput{
+    height: 100px;
 }
 
 span {
@@ -278,8 +280,24 @@ span {
     height: 2.5rem;
 }
 
+.formCateg{
+    color: var(--mylight);
+    font-family: 'Poppins';
+    padding: 5% 0 5% 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+.alert{
 
-
+    align-items: baseline;
+    width: 80%;
+}
 footer {
     font-family: 'Poppins';
     background-color: black;
@@ -293,6 +311,9 @@ footer {
     color: white;
     margin: 0;
 }
+
+
+
 
 @media screen and (max-width: 900px) {
 
@@ -415,6 +436,10 @@ footer {
 
     .categInfo{
         padding: 0 2% 0 2%;
+    }
+
+    .form{
+        width: 80%;
     }
 
 
