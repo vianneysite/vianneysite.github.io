@@ -17,18 +17,39 @@ function displayMenu() {
     }
 
 }
+
+//A retravailler
+
+const tousLesInputs = document.querySelectorAll('input');
+
+
+tousLesInputs.forEach((input) => {
+  input.addEventListener('input', () => {
+    if (input.value.trim() !== '') {
+
+      input.style.backgroundColor = '#e5eaee';
+    } else {
+ 
+      input.style.backgroundColor = 'rgba(255, 255, 255, 0.36)';
+    }
+  });
+});
+
+//
+
+
 const div = document.querySelector('.header');
 
 
 window.addEventListener('scroll', () => {
-    if (window.scrollY > 40) {
-        div.classList.add('scroll');
+        if (window.scrollY > 40) {
+            div.classList.add('scroll');
 
-    }
-    else {
-        div.classList.remove('scroll');
+        }
+        else {
+            div.classList.remove('scroll');
 
-    }
-});
+        }
+    });
 
 
