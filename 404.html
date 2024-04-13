@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Erreur 404</title>
+    <link rel="icon" href="https://vianneysite.github.io/img/facivon.png" type="image/png">
+    <style>
+        @font-face {
+            font-family: 'Reddit';
+            src: url('https://vianneysite.github.io/polices/Reddit_Mono/RedditMono-VariableFont_wght.ttf') format('woff2');
+        }
+
+        * {
+            --gris: rgb(151, 152, 153);
+            --texte1: rgb(255, 255, 255);
+            --Ombre2: 2px 2px 2px rgba(129, 133, 148, 0.582);
+            --mydark: #0A090C;
+        }
+
+        body {
+            margin: 0;
+            background-color: var(--gris);
+        }
+
+        h1 {
+            animation: slideFromBottom ease-in 2s;
+            font-family: 'Reddit';
+            font-weight: 300;
+            font-size: 1.5rem;
+            text-align: center;
+        }
+
+        .client {
+            opacity: 0;
+            animation: slideFromBottom ease-in 2s;
+            animation-fill-mode: forwards;
+            animation-delay: 2s;
+            text-align: center;
+        }
+  
+        .nom{
+            opacity: 0;
+            animation: slideFromBottom ease-in 2s;
+            animation-fill-mode: forwards;
+            animation-delay: 4s;
+            text-align: center;
+        }
+         
+        img {
+            animation: fadeInOpacity ease-in 1s;
+            display: block;
+            margin: 1rem auto 1rem auto;
+            width: 250px;
+            border-radius: 20rem 20rem 0;
+        }
+
+        @keyframes slideFromBottom {
+            0% {
+                transform: translateY(100%);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInOpacity {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        form {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 30;
+            height: 120px;
+            width: 450px;
+            border-radius: 0.5rem;
+            background-color: #ffffff5d;
+            backdrop-filter: blur(6px);
+            box-shadow: var(--Ombre2);
+            outline: 2px solid var(--mydark);
+            padding: 5px;
+        }
+ 
+        .false{
+            display: none;
+        } 
+        .true{
+            display: block;
+        }
+
+        .input {
+            display: flex;
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+        }
+
+        input{
+            margin-top: 2px;
+            border-radius: 0.5rem;
+            height: 20px;
+            border: solid 2px var(--mydark);
+            padding: 3px;
+        }
+
+        input:focus{
+          outline: solid 1px var(--mydark);
+        }
+
+        .boutton{
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        #ok{
+            cursor: pointer;
+            text-align: center;
+            margin:3px;
+            border: solid 2px var(--mydark);
+            border-radius: 0.5rem;
+            width: 30px;
+            transition: all 1s;
+        }
+
+        #ok:hover{
+            background-color: rgb(114, 118, 148);
+        }
+
+        #annul{
+            cursor: pointer;
+            text-align: center;
+            margin:3px;
+            border: solid 2px var(--mydark);
+            border-radius: 0.5rem;
+            width: 60px;
+            transition: all 1s; 
+        }
+
+        #annul:hover{
+            background-color: rgb(148, 114, 114);
+        }
+
+        a{
+            color: rgb(76, 2, 145);
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        @media screen and (max-width: 785px) {
+            h1{
+                font-size: 1.2rem;
+            }
+        }
+        @media screen and (max-width: 500px) {
+            form{
+                width: 95%;
+            }
+            h1{
+                font-size: 1rem;
+            }
+
+            img{
+                width: 70%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <img src="https://vianneysite.github.io/img/logo.png" alt="logo">
+    <h1>Cette page n’existe pas ou est en cours de développement.</h1>
+    <h1 class="client">Vous ête client et vous rechercher votre site <a onclick="montre()">cliquer ici</a>.</h1>
+    <h1 class="nom">Vianney Pacaud dévlopement, n'hésiter pas, contacter moi : "vianney.pacaud@outlook.fr".</h1>
+    <form class="form false">
+        <div class="input">
+            <input type="text" id="Code" placeholder="Code du site"></input>
+            <input type="text" id="client_Nom" placeholder="Votre Nom"></input>
+            <input type="text" id="client_Prenom" placeholder="Votre Prénom"></input>
+        </div>
+        <div class="boutton">
+        <div id="ok">Ok</div>
+        <div id="annul" onclick="cacher()">Annuler</div>
+        </div>
+    </form>
+</body>
+<script>
+
+function montre() {
+    const formElement = document.querySelector('.form'); 
+    formElement.classList.remove('false');
+    formElement.classList.add('true');
+}
+
+function cacher() {
+    const formElement = document.querySelector('.form'); 
+    formElement.classList.add('false');
+    formElement.classList.remove('true');
+}
+
+    const clients = [
+        { Code: 'BCH', num: 1, url: 'https://vianneysite.github.io/BCH/', client_Nom: 'Pascaud', client_Prenom: 'Denis' },
+    ];
+
+    document.getElementById('ok').addEventListener('click', function () {
+        const codeInput = document.getElementById('Code').value;
+        const nomInput = document.getElementById('client_Nom').value;
+        const prenomInput = document.getElementById('client_Prenom').value;
+
+        const matchingClient = clients.find(client => {
+            return client.Code.toLowerCase() === codeInput.toLowerCase();
+        });
+
+        if (matchingClient) {
+            window.location.href = matchingClient.url;
+        } else if (nomInput || prenomInput) {
+
+            const clientByNomPrenom = clients.find(client => {
+                return client.client_Nom.toLowerCase() === nomInput.toLowerCase() &&
+                    client.client_Prenom.toLowerCase() === prenomInput.toLowerCase();
+            });
+
+            if (clientByNomPrenom) {
+                window.location.href = clientByNomPrenom.url;
+            } else {
+                alert('Aucun site correspondant trouvé.');
+            }
+        } else {
+            alert('Aucun site correspondant trouvé.');
+        }
+    });
+</script>
+
+
+
+</html>

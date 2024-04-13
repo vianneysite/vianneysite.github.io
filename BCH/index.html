@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Chambres d'hôtes de la Barbinière</title>
+    <link rel="shortcut icon" href="img/Facivon.png">
+</head>
+
+<body>
+    <div class="fond">
+        <div class="header">
+            <div class="title">
+                <h1 class="inTitle">La Barbinière<font>Chambres d'hôtes</font>
+                </h1>
+                <a id="open" class="menuBtn on" onclick="displayMenu()"><img class="menuPicture" src="img/menu.svg"></a>
+                <a id="close" class="menuBtn" onclick="displayMenu()"><img class="menuPicture" src="img/close.svg"></a>
+            </div>
+            <div class="navbar">
+                <a class="navbtn" href="#accueil">Accueil</a>
+                <a class="navbtn" href="#maison">La Maison</a>
+                <a class="navbtn" href="#réserver">Réserver</a>
+                <a class="navbtn" href="#contact">Contact</a>
+            </div>
+        </div>
+        <div id="navbar_smartphone" class="navbar_smartphone">
+            <a class="navbtn" href="#accueil" onclick="displayMenu()">Accueil</a>
+            <a class="navbtn" href="#maison" onclick="displayMenu()">La Maison</a>
+            <a class="navbtn" href="#réserver" onclick="displayMenu()">Réserver</a>
+            <a class="navbtn" href="#contact" onclick="displayMenu()">Contact</a>
+        </div>
+        <div id="accueil" class="welcome">
+            <img src="img/façace maison marron.jpg" class="housePicture">
+            <div class="presentation">
+                <h1 class="presentationTitle light ">Bienvenue à la Barbinière</h1>
+                <h2 class="presentationTitle light ">Un gîte typique au coeur de la Vendée</h2>
+                <div class="choice">
+                    <a class="startbtn" href="#maison">Découvrir la maison</a>
+                    <a class="startbtn" href="#réserver">Nos offres</a>
+                </div>
+            </div>
+
+
+        </div>
+        <div id="maison" class="dark categ">
+            <h1 class="light categTitle ">Une maison idéalement placée</h1>
+            <div class="categInfo">
+                <div class="infoList">
+                    <p class="info">- D31, 85110 Chantonnay</p>
+                    <p class="info">- A 35 minutes en voiture du Puy du Fou, entre La Roche-sur-Yon et Niort</p>
+                    <p class="info">- Accessible par A11 depuis Paris</p>
+                    <p class="info">- Village pittoresque de Saint-Philbert-du-Pont-Charrault</p>
+                </div>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19558.34158514234!2d-0.9873919385225369!3d46.64609485668181!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x480692957c4dccf3%3A0xa0d3754e224a420!2sLa%20Barbini%C3%A8re%2C%2085110%20Chantonnay!5e0!3m2!1sfr!2sfr!4v1706530718397!5m2!1sfr!2sfr"
+                    style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+        <div class="hostServices categ">
+            <img class="hostPicture" src="img/grand salon 3.jpg" alt="salle de bains">
+            <div class="categInfo hostServices ">
+                <h1 class="categTitle hostServices">L'hospitalité vendéenne à votre service</h1>
+                <div class="infoList hostServices ">
+                    <p class="info">- Sanitaires et cuisine</p>
+                    <p class="info">- Petit déjeûner compris</p>
+                    <p class="info">- Dîner sur demande</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="réserver" class="dark categ">
+            <h1 class="categTitle light">Nos offres adaptées à vos besoins</h1>
+            <div class="formulas">
+                <a href="chambre1.html" class="proposition">
+                    <img class="propoIllustration" src="img/chambre marron avec CDB impasse.jpg" alt="">
+                    <h3>Chambre lit double</h3>
+                    <div class="proprieties">
+                        <p class="prop">- Lorem ipsum</p>
+                        <p class="prop">- Lorem ipsum</p>
+                        <p class="prop">- Lorem ipsum</p>
+                    </div>
+                    <p class="pleaseClick">Cliquez pour découvrir l'offre</p>
+                </a>
+                <a href="chambre2.html" class="proposition">
+                    <img class="propoIllustration" src="img/chambre marron avec CDB impasse.jpg" alt="">
+                    <h3>Chambre 2 lits</h3>
+                    <div class="proprieties">
+                        <p class="prop">- Lorem ipsum</p>
+                        <p class="prop">- Lorem ipsum</p>
+                        <p class="prop">- Lorem ipsum</p>
+                    </div>
+                    <p class="pleaseClick">Cliquez pour découvrir l'offre</p>
+                </a>
+                <a href="chambre12.html" class="proposition">
+                    <img class="propoIllustration" src="img/grand salon 3.jpg" alt="">
+                    <h3>Formule 2 chambres</h3>
+                    <div class="proprieties">
+                        <p class="prop">- Lorem ipsum</p>
+                        <p class="prop">- Lorem ipsum</p>
+                        <p class="prop">- Lorem ipsum</p>
+                    </div>
+                    <p class="pleaseClick">Cliquez pour découvrir l'offre</p>
+                </a>
+            </div>
+        </div>
+
+        <div id="contact" class="contact categ formCateg">
+            <h1 class="categTitle">Contactez-nous</h1>
+            <div class="form">
+                <label for="email">Adresse mail :</label>
+                <input id="Input" name="email" type="email" required>
+                <label for="tel">Numéro de téléphone :</label>
+                <input id="Input" name="tel" type="tel" required>
+                <label for="message">Votre message :</label>
+                <textarea id="Input" class="textInput" spellcheck="true" name="message" required></textarea>
+            </div>
+            <a style="margin-top: 1%;" id="EnvoieForm" class="startbtn">Envoyer ma demande</a>
+
+        </div>
+
+        <div class="recaptcha" id="recaptcha">
+            <div>
+                <label class="container">
+                    <input type="checkbox" name="robotCheckbox" id="robotCheckbox">
+                    <img class="img-unchecked" src="img/unchecked.png" width="50px">
+                    <img class="img-checked" src="img/checked.png" width="50px">
+                    Je ne suis pas un robot
+                </label>
+            </div>
+        </div>
+
+
+        <footer>
+            <p class="note">Développé par Vianney et Philbert</p>
+            <p class="note">©️ 2024 - Uni</p>
+        </footer>
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>
