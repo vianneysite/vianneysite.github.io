@@ -113,17 +113,3 @@ const countdownInterval = setInterval(() => {
 }, 1000); // Affiche le décompte chaque seconde
 
 */
-
-
-
-
-
-//pour mettre les chiffre de numéro de tel 2 par 2, mais ça marche plus pourquoi?
-
-const telInput = document.getElementById("tel");
-
-telInput.addEventListener("input", () => {
-  const value = telInput.value;
-  const newValue = value.replace(/([0-9]{2})([0-9]{2})/g, "$1 $2");
-  telInput.value = newValue;
-});
