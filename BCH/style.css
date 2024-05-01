@@ -469,8 +469,8 @@ footer {
         z-index: 19;
         transition: all 0.5s;
         flex-direction: column;
-        width: 100px;
-        height: 80%;
+        width: 120px;
+        height: 100%;
         top: 5%;
         right: 0;
     }
