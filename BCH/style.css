@@ -68,8 +68,8 @@ font {
 
 }
 
-.navbar_smartphone{
-display: none;
+.navbar_smartphone {
+    display: none;
 }
 
 .title {
@@ -109,16 +109,17 @@ display: none;
     justify-content: space-evenly;
     text-decoration: none;
     color: var(--mydark);
-    padding:1% 1.5% 1% 1.5%;
+    padding: 1% 1.5% 1% 1.5%;
     border-radius: 1rem;
     transition: background-color 0.5s;
 
 }
 
 .navbtn:hover {
-    background-color:#a9acae6a ;
+    background-color: #a9acae6a;
 }
-.icon{
+
+.icon {
     width: 1rem;
 }
 
@@ -262,9 +263,13 @@ iframe {
     background-color: var(--mylight);
     color: black;
     border-radius: 1rem;
-    width: 25%;
+    width: 280px; /*Ne surtout pas modifié(permet le maintien des dimensions)*/
     transition: background-color 0.5s, transform 0.2s, margin-top 0.2s;
     margin-top: 3px;
+}
+
+.proposition h3{
+    font-size: 1rem; /*Ne surtout pas modifié(permet le maintien des dimensions)*/
 }
 
 .proposition:hover {
@@ -428,7 +433,31 @@ footer {
     font-family: 'Poppins';
 }
 
+@media screen and (max-width: 1200px) {
+    .proprieties {
+        font-size: 13px;
+    }
+}
 
+@media screen and (max-width: 1130px) {
+    .presentationTitle {
+        font-size: 30px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 1057px) {
+    .presentationTitle {
+        font-size: 25px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+}
 
 
 
@@ -478,12 +507,9 @@ footer {
     .navbar_smartphone.on {
         display: flex;
         transform: translateX(100%);
-        /* Déplacez la barre de navigation hors de l'écran */
         animation: slideIn 0.5s forwards;
-        /* Utilisez une animation pour la faire glisser vers la gauche */
     }
 
-    /* Définissez l'animation "slideIn" */
     @keyframes slideIn {
         0% {
             transform: translateX(100%);
@@ -511,6 +537,10 @@ footer {
         justify-content: center;
         align-items: center;
         padding: 7% 0 7% 0;
+    }
+
+    .presentationTitle {
+        font-size: xx-large;
     }
 
     .choice {
