@@ -110,7 +110,7 @@ font {
     text-decoration: none;
     color: var(--mydark);
     padding: 1% 1.5% 1% 1.5%;
-    border-radius: 1rem;
+    border-radius: 1.5rem;
     transition: background-color 0.5s;
 
 }
