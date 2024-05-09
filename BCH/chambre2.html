@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Chambre à deux lits - La Barbinère</title>
-    <script src="script.js"></script>
 </head>
 
 <body>
@@ -55,8 +54,21 @@
                 <label for="email">Adresse mail :</label>
                 <input name="email" type="email">
                 <label for="tel">Numéro de téléphone :</label>
-                <input type="tel">
+                <input type="tel" id="tel">
+                <label for="nom">Nom :</label>
+                <input name="nom" type="text">
+                <label for="Prenom">Prénom :</label>
+                <input name="Prenom" type="text">
+                <label for="Chambre">Chambre :</label>
+                <select name="chambre" id="Chambre-select">
+                    <option value="Chambre à deux lits">Chambre à deux lits 55€/nuit</option>
+                    <option value="Chambre à lit double">Chambre à lit double 65€/nuit</option>
+                    
+                    <option value="Les deux Chambres">Les deux Chambres 110€/nuit</option>
+                </select>
+                <p name="Prix" id="Prix"></p>
             </div>
+
             <p class="alert">Votre demande sera traitée manuellement par le propriétaire dans les jours qui suivent.
                 Vous serez informé par amil ou téléphone de la confirmation ou de l'impossibilité de votre réservation.
             </p>

@@ -295,7 +295,9 @@ label {
 input[type="email"],
 input[type="date"],
 input[type="tel"],
-textarea {
+input[type="text"],
+textarea,
+select {
     border: 1px solid var(--mydark);
     padding: 5px;
     background-color: #ffffff5d;
@@ -308,14 +310,18 @@ textarea {
 input[type="email"]:hover,
 input[type="date"]:hover,
 input[type="tel"]:hover,
-textarea:hover {
+input[type="text"]:hover,
+textarea:hover,
+select:hover {
     background-color: var(--mylight);
 }
 
 input[type="email"]:focus,
 input[type="date"]:focus,
 input[type="tel"]:focus,
-textarea:focus {
+input[type="text"]:focus,
+textarea:focus,
+select:focus {
     outline: none;
     background-color: var(--mylight);
 }

@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Chambre lit double - La Barbinère</title>
-    <script src="script.js"></script>
 </head>
 
 <body>
@@ -27,9 +26,12 @@
         </div>
         <div id="navbar_smartphone" class="navbar_smartphone">
             <a class="navbtn" href="#accueil" onclick="displayMenu()"><img src="img/maison.svg" class="icon">Accueil</a>
-            <a class="navbtn" href="#maison" onclick="displayMenu()"><img src="img/broche-de-localisation.svg" class="icon">La Maison</a>
-            <a class="navbtn" href="#réserver" onclick="displayMenu()"><img src="img/calendrier.svg" class="icon">Réserver</a>
-            <a class="navbtn" href="#contact" onclick="displayMenu()"><img src="img/telephone.svg" class="icon">Contact</a>
+            <a class="navbtn" href="#maison" onclick="displayMenu()"><img src="img/broche-de-localisation.svg"
+                    class="icon">La Maison</a>
+            <a class="navbtn" href="#réserver" onclick="displayMenu()"><img src="img/calendrier.svg"
+                    class="icon">Réserver</a>
+            <a class="navbtn" href="#contact" onclick="displayMenu()"><img src="img/telephone.svg"
+                    class="icon">Contact</a>
         </div>
 
 
@@ -57,8 +59,17 @@
                 <input name="email" type="email">
                 <label for="tel">Numéro de téléphone :</label>
                 <input type="tel" id="tel">
-
-
+                <label for="nom">Nom :</label>
+                <input name="nom" type="text">
+                <label for="Prenom">Prénom :</label>
+                <input name="Prenom" type="text">
+                <label for="Chambre">Chambre :</label>
+                <select name="chambre" id="Chambre-select">
+                    <option value="Chambre à lit double">Chambre à lit double 65€/nuit</option>
+                    <option value="Chambre à deux lits">Chambre à deux lits 55€/nuit</option>
+                    <option value="Les deux Chambres">Les deux Chambres 110€/nuit</option>
+                </select>
+                <p name="Prix" id="Prix"></p>
 
 
             </div>

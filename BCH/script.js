@@ -1,3 +1,55 @@
+//calcul du prix
+
+const startDateInput = document.querySelector('input[name="startDate"]');
+const endDateInput = document.querySelector('input[name="endDate"]');
+const chambreSelect = document.getElementById('Chambre-select');
+const prixElement = document.getElementById('Prix');
+
+
+function calculerNombreNuits(dateDebut, dateFin) {
+    const debut = new Date(dateDebut);
+    const fin = new Date(dateFin);
+    const differenceEnTemps = fin - debut;
+    const differenceEnJours = differenceEnTemps / (1000 * 3600 * 24);
+    return Math.ceil(differenceEnJours);
+}
+
+
+function mettreAJourEstimation() {
+    const dateDebut = startDateInput.value;
+    const dateFin = endDateInput.value;
+    const chambrePrix = chambreSelect.value;
+
+    if (!dateDebut || !dateFin) {
+        prixElement.textContent = "Veuillez renseigner les dates d'arrivée et de départ.";
+        return;
+    }
+
+    const nombreNuits = calculerNombreNuits(dateDebut, dateFin);
+
+    let prixParNuit;
+    switch (chambrePrix) {
+        case 'Chambre à lit double':
+            prixParNuit = 65;
+            break;
+        case 'Chambre à deux lits':
+            prixParNuit = 55;
+            break;
+        case 'Les deux Chambres':
+            prixParNuit = 110;
+            break;
+        default:
+            prixParNuit = 0;
+    }
+
+    const prixTotal = nombreNuits * prixParNuit;
+    prixElement.textContent = `Estimation : ${prixTotal}€`;
+}
+
+startDateInput.addEventListener('change', mettreAJourEstimation);
+endDateInput.addEventListener('change', mettreAJourEstimation);
+chambreSelect.addEventListener('change', mettreAJourEstimation);
+//
 var isMenuVisible = false;
 function displayMenu() {
   var menu = document.getElementById('menu');
@@ -127,3 +179,5 @@ telInput.addEventListener("input", () => {
   const newValue = value.replace(/([0-9]{2})([0-9]{2})/g, "$1 $2");
   telInput.value = newValue;
 });
+
+
