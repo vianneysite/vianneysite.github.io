@@ -48,17 +48,19 @@
             </div>
         </div>
         <!--rajouter d'autres div class welcome hospitality s'il y a d'autres infos à mettre et plus de photos-->
-        <div class="formCateg">
+        <form action="php/enregistrer.php" method="post" class="formCateg">
             <h1 class="categTitle">Réservez dès maintenant - 65€/nuit</h1>
             <div class="form">
                 <label for="startDate">Date d'arrivée :</label>
                 <input name="startDate" type="date">
                 <label for="endDate">Date de fin de séjour :</label>
                 <input name="endDate" type="date">
+                <label for="HeureArrive">Heure d'arrivée (environ) :</label>
+                <input name="HeureArrive" type="time">
                 <label for="email">Adresse mail :</label>
                 <input name="email" type="email">
                 <label for="tel">Numéro de téléphone :</label>
-                <input type="tel" id="tel">
+                <input type="tel" name="tel" id="tel">
                 <label for="nom">Nom :</label>
                 <input name="nom" type="text">
                 <label for="Prenom">Prénom :</label>
@@ -70,8 +72,6 @@
                     <option value="Les deux Chambres">Les deux Chambres 110€/nuit</option>
                 </select>
                 <p name="Prix" id="Prix"></p>
-
-
             </div>
             <p class="alert">Votre demande sera traitée manuellement par le propriétaire dans les jours qui suivent.
                 Vous serez informé par email ou téléphone de la confirmation ou de l'impossibilité de votre réservation.
@@ -82,9 +82,8 @@
                 directement pour la formule <a class="navbtnPage" href="chambre12.html">Deux chambres</a>. Voir section
                 <a class="navbtnPage" href="index.html#contact">Contact</a>.
             </p>
-            <a class="startbtn">Envoyer ma demande</a>
-
-        </div>
+            <a href="php/enregistrer.php" class="startbtn" onclick="document.querySelector('.formCateg').submit(); return false;">Envoyer ma demande</a>
+        </form>
 
 
         <footer>
