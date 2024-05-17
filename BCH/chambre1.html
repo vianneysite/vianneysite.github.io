@@ -18,25 +18,27 @@
                 <a id="close" class="menuBtn" onclick="displayMenu()"><img class="menuPicture" src="img/close.svg"></a>
             </div>
             <div class="navbar">
-                <a class="navbtn" href="#accueil"><img src="img/maison.svg" class="icon">Accueil</a>
-                <a class="navbtn" href="#maison"><img src="img/broche-de-localisation.svg" class="icon">La Maison</a>
-                <a class="navbtn" href="#réserver"><img src="img/calendrier.svg" class="icon">Réserver</a>
-                <a class="navbtn" href="#contact"><img src="img/telephone.svg" class="icon">Contact</a>
+                <a class="navbtn" href="index.html#accueil"><img src="img/maison.svg" class="icon">Accueil</a>
+                <a class="navbtn" href="index.html#maison"><img src="img/broche-de-localisation.svg" class="icon">La
+                    Maison</a>
+                <a class="navbtn" href="index.html#réserver"><img src="img/calendrier.svg" class="icon">Réserver</a>
+                <a class="navbtn" href="index.html#contact"><img src="img/telephone.svg" class="icon">Contact</a>
             </div>
         </div>
         <div id="navbar_smartphone" class="navbar_smartphone">
-            <a class="navbtn" href="#accueil" onclick="displayMenu()"><img src="img/maison.svg" class="icon">Accueil</a>
-            <a class="navbtn" href="#maison" onclick="displayMenu()"><img src="img/broche-de-localisation.svg"
+            <a class="navbtn" href="index.html#accueil" onclick="displayMenu()"><img src="img/maison.svg"
+                    class="icon">Accueil</a>
+            <a class="navbtn" href="index.html#maison" onclick="displayMenu()"><img src="img/broche-de-localisation.svg"
                     class="icon">La Maison</a>
-            <a class="navbtn" href="#réserver" onclick="displayMenu()"><img src="img/calendrier.svg"
+            <a class="navbtn" href="index.html#réserver" onclick="displayMenu()"><img src="img/calendrier.svg"
                     class="icon">Réserver</a>
-            <a class="navbtn" href="#contact" onclick="displayMenu()"><img src="img/telephone.svg"
+            <a class="navbtn" href="index.html#contact" onclick="displayMenu()"><img src="img/telephone.svg"
                     class="icon">Contact</a>
         </div>
 
 
         <div class="welcome dark chambre">
-            <img class="housePicture" src="img/grand salon 3.jpg" alt="salle de bains">
+            <img class="housePicture" src="img/chambrelit double.jpg" alt="chambre lit double">
             <div class="hospitalityInfo">
                 <h1 class="light categTitle">Location de la chambre à lit double</h1>
                 <div class="infoList">
@@ -47,9 +49,53 @@
                 </div>
             </div>
         </div>
+
+        <div class="doubleCateg">
+            <div class="chambre">
+                <div class="hospitalityInfo">
+                    <h1 class="categTitle">Une salle d'eau directement accessible depuis la chambre</h1>
+                    <div class="infoList">
+                        <p class="info">- Une douche</p>
+                        <p class="info">- Un lavabo</p>
+                        <p class="info">- Des toilettes</p>
+                    </div>
+                </div>
+                <img class="housePictureVertical" src="img/salledeau1.jpg" alt="salle d'eau">
+            </div>
+
+            <div class="chambre">
+                <div class="hospitalityInfo">
+                    <h1 class="categTitle">Le Petit déjeûner continental</h1>
+                    <div class="infoList">
+                        <p class="info">- Croissants, pain, brioche, confiture, beurre et pâte à tartiner</p>
+                        <p class="info">- Chocolat chaud, thé ou café</p>
+                        <p class="info">- Servi dans le grand salon ou la terrasse </p>
+                    </div>
+                </div>
+                <img class="housePicture" src="img/petitdej1.jpg" alt="salle d'eau">
+            </div>
+        </div>
+
+        <div class="doubleCateg dark">
+            <div class="chambre">
+                <img class="housePicture" src="img/minisalonlitdouble.jpg" alt="petit salon">
+                <div class="hospitalityInfo">
+                    <h1 class="categTitle">Petit salon dans la chambre</h1>
+                </div>
+            </div>
+
+            <div class="chambre">
+                <img class="housePicture" src="img/jardin1.jpg" alt="jardin">
+                <div class="hospitalityInfo">
+                    <h1 class="categTitle">Terasse et jardin à disposition</h1>
+                </div>
+            </div>
+        </div>
+
+
         <!--rajouter d'autres div class welcome hospitality s'il y a d'autres infos à mettre et plus de photos-->
         <form action="php/enregistrer.php" method="post" class="formCateg">
-            <h1 class="categTitle">Réservez dès maintenant - 65€/nuit</h1>
+            <h1 class="categTitle">Réservez dès maintenant</h1>
             <div class="form">
                 <label for="startDate">Date d'arrivée :</label>
                 <input name="startDate" type="date">
@@ -67,9 +113,9 @@
                 <input name="Prenom" type="text">
                 <label for="Chambre">Chambre :</label>
                 <select name="chambre" id="Chambre-select">
-                    <option value="Chambre à lit double">Chambre à lit double 65€/nuit</option>
-                    <option value="Chambre à deux lits">Chambre à deux lits 55€/nuit</option>
-                    <option value="Les deux Chambres">Les deux Chambres 110€/nuit</option>
+                    <option value="Chambre à lit double">Chambre à lit double 70€/nuit</option>
+                    <option value="Chambre à deux lits">Chambre à deux lits 60€/nuit</option>
+                    <option value="Les deux Chambres">Les deux Chambres 120€/nuit</option>
                 </select>
                 <p name="Prix" id="Prix"></p>
             </div>
@@ -78,11 +124,12 @@
             </p>
             <p class="alert">
                 La réservation d'une seule des chambres bloque celle de la seconde. Si l'un de vos proches souhaite
-                réserver à la même période, merci de nous en informer par mail ou téléphone. Vous pouvez aussi opter
+                réserver à la même période, merci de nous en informer par email ou téléphone. Vous pouvez aussi opter
                 directement pour la formule <a class="navbtnPage" href="chambre12.html">Deux chambres</a>. Voir section
                 <a class="navbtnPage" href="index.html#contact">Contact</a>.
             </p>
-            <a href="php/enregistrer.php" class="startbtn" onclick="document.querySelector('.formCateg').submit(); return false;">Envoyer ma demande</a>
+            <a href="php/enregistrer.php" class="startbtn"
+                onclick="document.querySelector('.formCateg').submit(); return false;">Envoyer ma demande</a>
         </form>
 
 

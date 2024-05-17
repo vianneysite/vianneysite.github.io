@@ -5,6 +5,7 @@
     --mygrey: #858585;
     --mybluewhite: #3b454eb6;
     --mydark: #0A090C;
+    --texthover: #996d1b;
     --Ombre: 5px 5px 5px rgba(129, 133, 148, 0.582);
     /*rgba(0, 6, 29, 0.582)*/
     --Ombre2: 2px 2px 2px rgba(129, 133, 148, 0.582);
@@ -125,7 +126,7 @@ font {
 
 .navbtnPage {
     text-decoration: none;
-    color: var(--mydark);
+    color: var(--texthover);
 
 }
 
@@ -135,14 +136,22 @@ font {
 
 .welcome {
     display: flex;
-    align-items: center;
     margin-top: 50px;
 
+}
+
+.chambre {
+    display: flex;
+    align-items: center;
 }
 
 .housePicture {
     width: 50%;
 
+}
+
+.housePictureVertical {
+    width: 25%;
 }
 
 .presentation {
@@ -185,15 +194,26 @@ font {
 
 }
 
+.doubleCateg {
+    display: flex;
+}
+
+.doubleCateg img {
+    object-fit: cover;
+    height: 100%;
+}
+.doubleCateg h1 {
+    font-size: 1.5rem;
+}
 .hospitality {
     margin: 0;
 }
 
 .hospitalityInfo {
-    width: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 0 3% 0 3%;
 }
 
 .info {
@@ -263,24 +283,27 @@ iframe {
     background-color: var(--mylight);
     color: black;
     border-radius: 1rem;
-    width: 280px; /*Ne surtout pas modifié(permet le maintien des dimensions)*/
+    width: 280px;
+    /*Ne surtout pas modifié(permet le maintien des dimensions)*/
     transition: background-color 0.5s, transform 0.2s, margin-top 0.2s;
     margin-top: 3px;
 }
 
-.proposition h3{
-    font-size: 1rem; /*Ne surtout pas modifié(permet le maintien des dimensions)*/
+.proposition h3 {
+    font-size: 1rem;
+    /*Ne surtout pas modifié(permet le maintien des dimensions)*/
 }
 
 .proposition:hover {
-    background-color: var(--mylight);
     margin-top: 0;
     transform: translateY(-3px);
+    color: var(--texthover);
 }
 
 .propoIllustration {
     width: 100%;
     border-radius: 1rem 1rem 0 0;
+
 }
 
 .proprieties {
@@ -573,14 +596,16 @@ footer {
         height: 250px;
         width: 90%;
     }
-
+    .doubleCateg{
+        flex-direction: column;
+    }
     .hospitality {
         margin: 0;
         flex-direction: column;
     }
 
     .chambre {
-        margin-top: 25%;
+        flex-direction: column;
     }
 
     .hospitalityInfo {
